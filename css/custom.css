@@ -248,7 +248,7 @@ div#category {
 
 /* 鼠标图标 */
 body {
-    cursor: url('/img/鼠标.png'), auto;
+    cursor: url('/img/鼠标2.png'), auto;
 }
 
 a,
@@ -256,7 +256,7 @@ a,
 [type=' reset']:not( :disabled),
 [type='submit']:not(:disabled),
 button:not(:disabled) {
-    cursor: url('/img/鼠标2.png'), auto !important;
+    cursor: url('/img/鼠标.png'), auto !important;
 }
 
 
