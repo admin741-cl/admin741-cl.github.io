@@ -3,11 +3,11 @@
   <title>孔乙己的长衫</title>
   <icon>https://www.gravatar.com/avatar/9447b1ec634af90af6ab29e41424ba47</icon>
   <subtitle>人人都笑孔乙己，人人又都是孔乙己</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://admin741-cl.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://admin741-cl.github.io/"/>
   <updated>2023-04-14T13:34:51.895Z</updated>
-  <id>http://example.com/</id>
+  <id>https://admin741-cl.github.io/</id>
   
   <author>
     <name>admin741</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/posts/3eeb.html"/>
-    <id>http://example.com/posts/3eeb.html</id>
+    <link href="https://admin741-cl.github.io/posts/3eeb.html"/>
+    <id>https://admin741-cl.github.io/posts/3eeb.html</id>
     <published>2023-04-14T13:20:30.813Z</published>
     <updated>2023-04-14T13:34:51.895Z</updated>
     
