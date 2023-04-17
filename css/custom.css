@@ -248,7 +248,7 @@ div#category {
 
 /* 鼠标图标 */
 body {
-    cursor: url('/img/鼠标2.png'), auto;
+    cursor: url('/img/鼠标.png'), auto;
 }
 
 a,
@@ -256,7 +256,7 @@ a,
 [type=' reset']:not( :disabled),
 [type='submit']:not(:disabled),
 button:not(:disabled) {
-    cursor: url('/img/鼠标.png'), auto !important;
+    cursor: url('/img/跳转箭头.png'), auto !important;
 }
 
 
@@ -393,3 +393,8 @@ button:not(:disabled) {
 #article-container figure.highlight {
     border-radius: 10px;
 }
+
+.loading-img {
+    background: url(https://npm.elemecdn.com/anzhiyu-blog@2.1.1/img/avatar.webp) no-repeat center center;
+    background-size: cover;
+  }
