@@ -1,17 +1,17 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>vue2/3区别理解 | 孔乙己的长衫</title><meta name="author" content="admin741,1957875100@qq.com"><meta name="copyright" content="admin741"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="持续更新中….01v-show和v-if指令的共同点和不同点相同点：v-show和v-if都能控制元素的显示和隐藏 不同点：手段：v-if是动态的向DOM树内添加或者删除DOM元素； v-show是通过设置DOM元素的display样式属性控制显隐； 编译过程：v-if切换有一个局部编译&#x2F;卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件； v-show只是简单的基于css切换；编译条件">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>为你的夏日带去清凉! | 孔乙己的长衫</title><meta name="author" content="admin741,1957875100@qq.com"><meta name="copyright" content="admin741"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="终于为博客安装上了便携小空调   .copyright-box a {   border-bottom: none !important;   padding: 0 !important; }">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue2&#x2F;3区别理解">
+<meta property="og:title" content="为你的夏日带去清凉!">
 <meta property="og:url" content="https://admin741-cl.github.io/posts/ae65.html">
 <meta property="og:site_name" content="孔乙己的长衫">
-<meta property="og:description" content="持续更新中….01v-show和v-if指令的共同点和不同点相同点：v-show和v-if都能控制元素的显示和隐藏 不同点：手段：v-if是动态的向DOM树内添加或者删除DOM元素； v-show是通过设置DOM元素的display样式属性控制显隐； 编译过程：v-if切换有一个局部编译&#x2F;卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件； v-show只是简单的基于css切换；编译条件">
+<meta property="og:description" content="终于为博客安装上了便携小空调   .copyright-box a {   border-bottom: none !important;   padding: 0 !important; }">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img1.baidu.com/it/u=1009672910,2505626862&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500">
-<meta property="article:published_time" content="2021-11-03T12:09:44.000Z">
-<meta property="article:modified_time" content="2023-06-17T06:44:59.838Z">
+<meta property="og:image" content="https://w.wallhaven.cc/full/m3/wallhaven-m3wr7m.png">
+<meta property="article:published_time" content="2022-10-20T14:06:17.000Z">
+<meta property="article:modified_time" content="2023-06-17T02:44:45.958Z">
 <meta property="article:author" content="admin741">
 <meta property="article:tag" content="孔乙己-admin741">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img1.baidu.com/it/u=1009672910,2505626862&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://admin741-cl.github.io/posts/ae65.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="#3b70fc"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/128.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"/><link rel="mask-icon" href="/img/siteicon/128.png" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://w.wallhaven.cc/full/m3/wallhaven-m3wr7m.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://admin741-cl.github.io/posts/ae65.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/manifest.json"/><meta name="msapplication-TileColor" content="#3b70fc"/><link rel="apple-touch-icon" sizes="180x180" href="/img/siteicon/128.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/siteicon/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/siteicon/16.png"/><link rel="mask-icon" href="/img/siteicon/128.png" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
@@ -52,12 +52,12 @@
     rightside: false,
   }
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'vue2/3区别理解',
+  title: '为你的夏日带去清凉!',
   isPost: true,
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-06-17 14:44:59'
+  postUpdate: '2023-06-17 10:44:45'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -161,7 +161,7 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/css/runtime/runtime.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="孔乙己的长衫" type="application/atom+xml">
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-blog@2.0.4/css/runtime/runtime.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://cdn.cbd.int/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="孔乙己的长衫" type="application/atom+xml">
 </head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
@@ -185,277 +185,19 @@ if (true) {
 document.addEventListener('pjax:send', () => {
   Pace.restart()
 })
-</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img1.baidu.com/it/u=1009672910,2505626862&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=500" onerror="onerror=null;src='/img/404.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="孔乙己的长衫"><span class="site-name">孔乙己的长衫</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">vue2/3区别理解</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-11-03T12:09:44.000Z" title="发表于 2021-11-03 20:09:44">2021-11-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-17T06:44:59.838Z" title="更新于 2023-06-17 14:44:59">2023-06-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="vue2/3区别理解"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><h1 id="持续更新中…"><a href="#持续更新中…" class="headerlink" title="持续更新中…."></a>持续更新中….</h1><h1 id="01v-show和v-if指令的共同点和不同点"><a href="#01v-show和v-if指令的共同点和不同点" class="headerlink" title="01v-show和v-if指令的共同点和不同点"></a>01v-show和v-if指令的共同点和不同点</h1><p>相同点：v-show和v-if都能控制元素的显示和隐藏</p>
-<p>不同点：手段：v-if是动态的向DOM树内添加或者删除DOM元素；<br> v-show是通过设置DOM元素的display样式属性控制显隐；<br> 编译过程：v-if切换有一个局部编译/卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件；<br> v-show只是简单的基于css切换；编译条件：v-if是惰性的，如果初始条件为假，则什么也不做；只有在条件第一次变为真时才开始局部编译;<br> v-show是在任何条件下，无论首次条件是否为真，都被编译，然后被缓存，而且DOM元素保留；性能消耗：v-if有更高的切换消耗；<br> v-show有更高的初始渲染消耗；使用场景：v-if适合运营条件不大可能改变；v-show适合频繁切换。</p>
-<h1 id="02vue组件中data为什么必须是一个函数"><a href="#02vue组件中data为什么必须是一个函数" class="headerlink" title="02vue组件中data为什么必须是一个函数\"></a>02vue组件中data为什么必须是一个函数\</h1><p>Vue组件可能存在多个实例，如果使用对象形式定义data，则会导致它们共用一个data对象，那么状态变更将会影响所有组件实例，这是不合理的；采用函数形式定义，在initData时会将其作为工厂函数返回全新data对象，有效规避多实例之间状态污染问题。而在Vue根实例创建过程中则不存在该限制，也是因为根实例只能有一个，不需要担心这种情况。</p>
-<h1 id="03-nextTick的使用"><a href="#03-nextTick的使用" class="headerlink" title="03$nextTick的使用\"></a>03$nextTick的使用\</h1><p><strong><em>\</em>用法：**</strong>将回调延迟到下次DOM更新循环之后执行。在修改数据之后立即使用它，然后等待DOM更新。它跟全局方法 Vue.nextTick 一样，不同的是回调的 this 自动绑定到调用它的实例上。</p>
-<p><strong><em>\</em>$nextTick() 的应用场景**</strong></p>
-<p>  在vue的生命周期 created() 钩子函数中进行 dom 操作，一定要放在 $nextTick() 函数中执行。在 created() 钩子函数执行的时候 DOM 其实并未进行任何渲染，而此时进行 DOM 操作无异于徒劳，所以此处一定要将 DOM 操作的代码放进 nextTick() 的回调函数中。</p>
-<p>  mounted() 钩子函数，因为该钩子函数执行时，所有的 DOM 挂载和 渲染都已完成，此时在该钩子函数中进行任何 DOM 操作都不会有问题</p>
-<p>在数据变化后要执行某个操作，而这个操作需要随数据改变而改变DOM结构时，这个操作都是需要放置 $nextTick() 的回调函数中。</p>
-<h1 id="04Vue中双向数据绑定是如何实现的"><a href="#04Vue中双向数据绑定是如何实现的" class="headerlink" title="04Vue中双向数据绑定是如何实现的\"></a>04Vue中双向数据绑定是如何实现的\</h1><p>Vue 数据双向绑定主要是指：数据变化更新视图，视图变化更新数据</p>
-<p>实现原理：采用数据监听、解析结合订阅者模式的方式，通过Object.defineProperty()来监听各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。从而实现数据的双向绑定</p>
-<p>主要分为以下几个步骤：</p>
-<p>需要observe的数据对象进行递归遍历，包括子属性对象的属性，都加上setter和getter这样的话，给这个对象的某个值赋值，就会触发setter，那么就能监听到了数据变化</p>
-<p>compile解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图</p>
-<p>Watcher订阅者是Observer和Compile之间通信的桥梁，主要做的事情是: ①在自身实例化时往属性订阅器(dep)里面添加自己 ②自身必须有一个update()方法 ③待属性变动dep.notice()通知时，能调用自身的update()方法，并触发Compile中绑定的回调，则功成身退。</p>
-<p>MVVM作为数据绑定的入口，整合Observer、Compile和Watcher三者，通过Observer来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，达到数据变化 -&gt; 视图更新；视图交互变化(input) -&gt; 数据model变更的双向绑定效果。</p>
-<h1 id="05vue中v-if和v-for优先级在vue2和vue3中的区别"><a href="#05vue中v-if和v-for优先级在vue2和vue3中的区别" class="headerlink" title="05vue中v-if和v-for优先级在vue2和vue3中的区别"></a>05vue中v-if和v-for优先级在vue2和vue3中的区别</h1><p>实践中不管是<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=vue2&amp;spm=1001.2101.3001.7020">vue2</a>或者vue3都不应该把v-if和v-for放在一起使用。</p>
-<p>在 vue 2.x 中，在一个元素上同时使用 v-if 和 v-for 时， v-for 会优先作用。</p>
-<p>在 vue 3.x 中， v-if 总是优先于 v-for 生效。</p>
-<p>vue2中v-for的优先级是高于v-if的，放在一起，会先执行循环在判断条件，并且如果值渲染列表中一小部分元素，也得再每次重渲染的时候遍历整个列表，比较浪费资源。</p>
-<p>vue3中v-if的优先级是高于v-for的，所以v-if执行时，它调用相应的变量如果不存在，就会导致异常</p>
-<h1 id="06vue常用的修饰符"><a href="#06vue常用的修饰符" class="headerlink" title="06vue常用的修饰符"></a>06vue常用的修饰符</h1><p>.stop：等同于 JavaScript 中的 event.stopPropagation() ，防止事件冒泡；</p>
-<p>.prevent ：等同于 JavaScript 中的 event.preventDefault() ，防止执行预设的行为（如果事件可取消，则取消该事件，而不停止事件的进一步传播）；作用是阻止默认事件（例如a标签的跳转</p>
-<p>.capture ：与事件冒泡的方向相反，事件捕获由外到内；</p>
-<p>.self ：只会触发自己范围内的事件，不包含子元素；</p>
-<p>.once ：只会触发一次。</p>
-<p>.trim修饰符的作用是把v-model绑定的值的首尾空格给去掉。在实际开发中我们一般用于搜索框的内容修饰，过滤掉用户多输入前后空格导致内容查不出来的情况。</p>
-<p>.left，.right，.middle这三个修饰符是鼠标的左中右按键触发的事件.</p>
-<h1 id="07自定义指令详解"><a href="#07自定义指令详解" class="headerlink" title="07自定义指令详解"></a>07自定义指令详解</h1><p><strong><em>\</em>为什么需要自定义指令**</strong>：因为vue是MVVM模式，只需要关注于数据和业务逻辑，不需要关注DOM的操作，但是有时候面对一些特殊的业务需求时，需要进行DOM的操作，这个时候就需要进行自定义指令。</p>
-<p>自定义局部指令:在options api选项中的directives中设置。局部自定义指令是一个对象，对象的属性是自定义指令的名称，对象中属性的值是自定义指令的钩子函数对象</p>
-<p>自定义全局指令:在app的directive方法。参数一（name）：自定义指令的名称。参数二（hooks）：自定义指令的钩子函数对象</p>
-<h1 id="08slot是什么？有什么作用？原理是什么？"><a href="#08slot是什么？有什么作用？原理是什么？" class="headerlink" title="08slot是什么？有什么作用？原理是什么？"></a>08slot是什么？有什么作用？原理是什么？</h1><p>slot又名插槽，是Vue的内容分发机制，组件内部的模板引擎使用slot元素作为承载分发内容的出口。插槽slot是子组件的一个模板标签元素，而这一个标签元素是否显示，以及怎么显示是由父组件决定的。slot又分三类，默认插槽，具名插槽和作用域插槽。</p>
-<p>默认插槽：又名匿名插槽，当slot没有指定name属性值的时候一个默认显示插槽，一个组件内只有有一个匿名插槽。</p>
-<p>具名插槽：带有具体名字的插槽，也就是带有name属性的slot，一个组件可以出现多个具名插槽。</p>
-<p>作用域插槽：默认插槽、具名插槽的一个变体，可以是匿名插槽，也可以是具名插槽，该插槽的不同点是在子组件渲染作用域插槽时，可以将子组件内部的数据传递给父组件，让父组件根据子组件的传递过来的数据决定如何渲染该插槽。</p>
-<p>实现原理：当子组件vm实例化时，获取到父组件传入的slot标签的内容，存放在vm.$slot中，默认插槽为vm.$slot.default，具名插槽为vm.$slot.xxx，xxx 为插槽名，当组件执行渲染函数时候，遇到slot标签，使用$slot中的内容进行替换，此时可以为插槽传递数据，若存在数据，则可称该插槽为作用域插槽。</p>
-<h1 id="09vue初始化页面闪动问题"><a href="#09vue初始化页面闪动问题" class="headerlink" title="09vue初始化页面闪动问题"></a>09vue初始化页面闪动问题</h1><p>在简单项目中，使用 v-cloak 指令是解决屏幕闪动的好方法。但在大型、工程化的项目中（webpack、vue-router）只有一个空的 div 元素，元素中的内容是通过路由挂载来实现的，这时我们就不需要用到 v-cloak 指令了。</p>
-<h1 id="10vue更新数组时触发视图更新的方法"><a href="#10vue更新数组时触发视图更新的方法" class="headerlink" title="10vue更新数组时触发视图更新的方法"></a>10vue更新数组时触发视图更新的方法</h1><p>Vue.set 响应式新增与修改数据</p>
-<p>可以设置对象或数组的值，通过key或数组索引，可以触发视图更新</p>
-<p>Vue.delete：删除对象或数组中元素，通过key或数组索引，可以触发视图更新</p>
-<p> push() 向数组的末尾添加一个或多个元素，并返回新的长度。</p>
-<p> pop() 删除最后一个元素，把数组长度减 1，并且返回它删除的元素的值。</p>
-<p> shift() 把数组的第一个元素从其中删除，并返回第一个元素的值。</p>
-<p> unshift() 向数组的开头添加一个或更多元素，并返回新的长度。</p>
-<p> splice() 向/从数组中添加/删除项目，然后返回被删除的项目。 该方法会改变原始数组。</p>
-<p> sort() 对数组的元素进行排序。</p>
-<p> reverse() 颠倒数组中元素的顺序。</p>
-<p>filter()、concat()、 slice()  这些方法不会改变被操作的数组，返回一个新的数组；</p>
-<h1 id="11Vue2-0-和-Vue3-0-有什么区别？"><a href="#11Vue2-0-和-Vue3-0-有什么区别？" class="headerlink" title="11Vue2.0 和 Vue3.0 有什么区别？"></a>11Vue2.0 和 Vue3.0 有什么区别？</h1><p><strong><em>\</em>双向绑定更新**</strong></p>
-<p>vue2 的双向数据绑定是利⽤ES5 的⼀个 API ，Object.defineProperty()对数据进⾏劫持 结合 发布订阅模式的⽅式来实现的。</p>
-<p>vue3 中使⽤了 ES6 的 ProxyAPI 对数据代理，通过 reactive() 函数给每⼀个对象都包⼀层 Proxy，通过 Proxy 监听属性的变化，从⽽ 实现对数据的监控。</p>
-<p>  这⾥是相⽐于vue2版本，使⽤proxy的优势如下</p>
-<p>  1.defineProperty只能监听某个属性，不能对全对象监听 可以省去for in、闭包等内容来提升效率（直接绑定整个对象即可）</p>
-<p>  2.可以监听数组，不⽤再去单独的对数组做特异性操作,通过Proxy可以直接拦截所有对象类型数据的操作，完美⽀持对数组的监听。</p>
-<p><strong><em>\</em>获取props**</strong></p>
-<p>vue2在script代码块可以直接获取props，vue3通过setup指令传递</p>
-<p><strong><em>\</em>API不同**</strong></p>
-<p>Vue2使⽤的是选项类型API（Options API），Vue3使⽤的是合成型API（Composition API）</p>
-<p><strong><em>\</em>建立数据data**</strong></p>
-<p>vue2是把数据放入data中，vue3就需要使用一个新的setup()方法，此方法在组件初始化构造得时候触发。</p>
-<p><strong><em>\</em>生命周期不同**</strong></p>
-<p>vue2   ———— vue3</p>
-<p>beforeCreate  -&gt; setup() 开始创建组件之前，创建的是data和method</p>
-<p>created     -&gt; setup()</p>
-<p>beforeMount   -&gt; onBeforeMount 组件挂载到节点上之前执行的函数。</p>
-<p>mounted    -&gt; onMounted 组件挂载完成后执行的函数</p>
-<p>beforeUpdate  -&gt; onBeforeUpdate 组件更新之前执行的函数。</p>
-<p>updated     -&gt; onUpdated 组件更新完成之后执行的函数。</p>
-<p>beforeDestroy  -&gt; onBeforeUnmount 组件挂载到节点上之前执行的函数。</p>
-<p>destroyed    -&gt; onUnmounted 组件卸载之前执行的函数。dszhuoyi</p>
-<p>activated    -&gt; onActivated 组件卸载完成后执行的函数</p>
-<p>deactivated   -&gt; onDeactivated</p>
-<p><strong><em>\</em>关于v-if和v-for的优先级:**</strong></p>
-<p>vue2 在一个元素上同时使用 v-if 和 v-for  v-for会优先执行</p>
-<p>  vue3 v-if 总会优先于  v-for生效</p>
-<p><strong><em>\</em>vue2和vue3的diff算法**</strong></p>
-<p><strong><em>\</em>vue2**</strong></p>
-<p>  vue2 diff算法就是进行虚拟节点对比，并返回一个patch对象，用来存储两个节点 不同的地方，最后用patch记录的消息去局部更新Dom。</p>
-<p>  vue2 diff算法会比较每一个vnode,而对于一些不参与更新的元素，进行比较是有 点消耗性能的。</p>
-<p><strong><em>\</em>vue3**</strong></p>
-<p>  vue3 diff算法在初始化的时候会给每个虚拟节点添加一个patchFlags，patchFlags 就是优化的标识。</p>
-<p>  只会比较patchFlags发生变化的vnode,进行更新视图，对于没有变化的元素做静 态标记，在渲染的时候直接复用。</p>
-<h1 id="12-Vue3带来了什么改变？"><a href="#12-Vue3带来了什么改变？" class="headerlink" title="12.Vue3带来了什么改变？"></a>12.Vue3带来了什么改变？</h1><p>Vue3.0在性能方面比Vue2.x快了1.2～2倍。</p>
-<p>重写虚拟DOM的实现</p>
-<p>运行时编译</p>
-<p>静态提升与事件侦听器缓存</p>
-<p>SSR 速度提高</p>
-<p>Vue3.x采用TypeScript重写，开发者使用Vue3.x时可以充分体验TS给编码带来的便利。</p>
-<p>Composition API：vue2中，我们一般会采用mixin来复用逻辑代码，用倒是挺好用的，不过也存在一些问题：例如代码来源不清晰、方法属性等冲突。基于此在vue3中引入了Composition API（组合API），使用纯函数分隔复用代码。和React中的hooks的概念很相似</p>
-<h1 id="13-reactive与ref的区别？"><a href="#13-reactive与ref的区别？" class="headerlink" title="13.reactive与ref的区别？"></a>13.reactive与ref的区别？</h1><p>Vue3 中的 ref 和 reactive 是 Vue3 中用于数据管理的两种不同的响应式 API。</p>
-<p>ref 用于创建一个包装简单值的响应式引用，例如一个数字、字符串或对象。当 ref 创建一个响应式引用时，它返回一个对象，该对象具有一个 value 属性，该属性指向实际值。当 ref 返回的对象中的 value 属性更改时，组件将自动重新渲染。</p>
-<p>reactive 用于创建一个响应式对象，该对象可以包含多个属性和嵌套属性。当使用 reactive 创建响应式对象时，返回的对象是一个代理对象，该对象具有与原始对象相同的属性，并且任何对代理对象属性的更改都将触发组件的重新渲染。</p>
-<p>综上所述，如果需要对简单值进行响应式处理，则使用 ref，如果需要对对象或嵌套对象进行响应式处理，则使用 reactive。</p>
-<h1 id="14-计算属性和watch以及methods的区别？"><a href="#14-计算属性和watch以及methods的区别？" class="headerlink" title="14.计算属性和watch以及methods的区别？"></a>14.计算属性和watch以及methods的区别？</h1><p><strong><em>\</em>对于Computed：**</strong>它支持缓存，只有依赖的数据发生了变化，才会重新计算</p>
-<p>不支持异步，当Computed中有异步操作时，无法监听数据的变化</p>
-<p>computed的值会默认走缓存，计算属性是基于它们的响应式依赖进行缓存的，也就是基于data声明过，或者父组件传递过来的props中的数据进行计算的。</p>
-<p>如果一个属性是由其他属性计算而来的，这个属性依赖其他的属性，一般会使用computed</p>
-<p>如果computed属性的属性值是函数，那么默认使用get方法，函数的返回值就是属性的属性值；在computed中，属性有一个get方法和一个set方法，当数据发生变化时，会调用set方法。</p>
-<p><strong><em>\</em>对于Watch：**</strong>它不支持缓存，数据变化时，它就会触发相应的操作</p>
-<p>支持异步监听</p>
-<p>监听的函数接收两个参数，第一个参数是最新的值，第二个是变化之前的值</p>
-<p>当一个属性发生变化时，就需要执行相应的操作监听数据必须是data中声明的或者父组件传递过来的props中的数据，当发生变化时，会触发其他操作，函数</p>
-<p>有两个的参数：immediate：组件加载立即触发回调函数 deep：深度监听，发现数据内部的变化，在复杂数据类型中使用，例如数组中的对象发生变化。需要注意的是，deep无法监听到数组和对象内部的变化。</p>
-<p>当想要执行异步或者昂贵的操作以响应不断的变化时，就需要使用watch。</p>
-<h1 id="15-route-和-router-的区别？"><a href="#15-route-和-router-的区别？" class="headerlink" title="15.$route 和 $router 的区别？"></a>15.$route 和 $router 的区别？</h1><p>$route 是“路由信息对象”，包括 path，params，hash，query，fullPath，matched，name 等路由信息参数</p>
-<p>$router 是“路由实例”想要导航到不同URL 对象包括了路由的跳转方法，钩子函数等。</p>
-<h1 id="16-v-model的使用？"><a href="#16-v-model的使用？" class="headerlink" title="16.v-model的使用？"></a>16.v-model的使用？</h1><p>v-model实现双向绑定的语法糖，常用于表单与组件之间的数据双向绑定.</p>
-<p>V-model的原理：</p>
-<pre><code>v-bind绑定一个value属性
+</script><link rel="stylesheet" href="/css/progress_bar.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img1.baidu.com/it/u=1009672910,2505626862&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=500" onerror="onerror=null;src='/img/404.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="孔乙己的长衫"><span class="site-name">孔乙己的长衫</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">为你的夏日带去清凉!</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-10-20T14:06:17.000Z" title="发表于 2022-10-20 22:06:17">2022-10-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-06-17T02:44:45.958Z" title="更新于 2023-06-17 10:44:45">2023-06-17</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="为你的夏日带去清凉!"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="post-content" id="article-container"><blockquote>
+<p>终于为博客安装上了便携小空调</p>
+</blockquote>
+<style>
+.copyright-box a {
+  border-bottom: none !important;
+  padding: 0 !important;
+}
+</style>
 
-v-on指令给当前元素绑定input事件
-</code></pre><p>可看出v-model绑定在表单上时，v-model其实就是v-bind绑定value和v-on监听input事件的结合体</p>
-<p>组件上的双向绑定（原理）</p>
-<p>v-model绑定在组件上的时候做了以下步骤</p>
-<pre><code>在父组件内给子组件标签添加 v-model ，其实就是给子组件绑定了 value 属性
-
-子组件内使用 prop 创建 创建 value 属性可以拿到父组件传递下来的值，名字必须是 value。
-
-子组件内部更改 value 的时候，必须通过 $emit 派发一个 input 事件，并携最新的值
-
-v-model 会自动监听 input 事件，把接收到的最新的值同步赋值到 v-model 绑定的变量上
-</code></pre><h1 id="17EventBus注册在全局上时，路由切换时会重复触发事件，如何解决呢？"><a href="#17EventBus注册在全局上时，路由切换时会重复触发事件，如何解决呢？" class="headerlink" title="17EventBus注册在全局上时，路由切换时会重复触发事件，如何解决呢？"></a>17EventBus注册在全局上时，路由切换时会重复触发事件，如何解决呢？</h1><p>添加Bus.$off来关闭</p>
-<p>beforeDestroy () {</p>
-<p>bus.$off(‘get’, this.myhandle)</p>
-<p>}</p>
-<p>如果想要用bus 来进行页面组件之间的数据传递，需要注意亮点，组件$emit事件应在beforeDestory生命周期内。其次，组件B内的$on记得要销毁。</p>
-<h1 id="18-vuex有哪几种属性？"><a href="#18-vuex有哪几种属性？" class="headerlink" title="18.vuex有哪几种属性？"></a>18.vuex有哪几种属性？</h1><p>vuex 是 Vue 配套的 公共数据管理工具，它可以把一些共享的数据，保存到 vuex 中，方便整个程序中的任何组件直接获取或修改我们的公共数据。</p>
-<p>有五种，分别是 State、 Getter、Mutation 、Action、 Module</p>
-<p>vuex 是 Vue 配套的 公共数据管理工具，它可以把一些共享的数据，保存到 vuex 中，方便整个程序中的任何组件直接获取或修改我们的公共数据。</p>
-<p>有五种，分别是 State、 Getter、Mutation 、Action、 Module</p>
-<p>state：用来存放多个组件会用到的公共属性</p>
-<p>mutations：改变state的规范途径，并且只能同步操作，可以在vue-devtools 追踪到修改记录</p>
-<p>getters：作用和computed相似，对state里面的多个属性计算时使用</p>
-<p>actions：一些对state的异步操作可以放在actions中，并通过在action提交到mutaions进行状态的修改</p>
-<p>modules：当store对象过于庞大时，可以根据具体的业务需求分为多个module</p>
-<h1 id="19-vue中过滤器有什么作用及详解？"><a href="#19-vue中过滤器有什么作用及详解？" class="headerlink" title="19.vue中过滤器有什么作用及详解？"></a>19.vue中过滤器有什么作用及详解？</h1><p>根据过滤器的名称，过滤器是用来过滤数据的，在Vue中使用filters来过滤数据，filters不会修改数据，而是过滤数据，改变用户看到的输出（计算属性 computed ，方法 methods 都是通过修改数据来处理数据格式的输出显示）。</p>
-<p>使用场景：需要格式化数据的情况，比如需要处理时间、价格等数据格式的输出 / 显示。比如后端返回一个 年月日的日期字符串，前端需要展示为 多少天前 的数据格式，此时就可以用fliters过滤器来处理数据。</p>
-<p>过滤器是一个函数，它会把表达式中的值始终当作函数的第一个参数。过滤器用在插值表达式 (两个花括号嵌套) 和 v-bind 表达式 中，然后放在操作符“ | ”后面进行指示。</p>
-<h1 id="20-v-on可以监听多个方法吗？"><a href="#20-v-on可以监听多个方法吗？" class="headerlink" title="20.v-on可以监听多个方法吗？"></a>20.v-on可以监听多个方法吗？</h1><p>可以一个元素绑定多个事件的两种写法，一个事件绑定多个函数的两种写法，修饰符的使用。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a v-on=&#x27;&#123;click:DoSomething,mouseleave:MouseLeave&#125;&#x27;&gt;doSomething&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<p>在method方法里面分别写两个事件；</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button @click=&quot;a(),b()&quot;&gt;点我ab&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="21-请详细说下你对vue生命周期的理解？"><a href="#21-请详细说下你对vue生命周期的理解？" class="headerlink" title="21.请详细说下你对vue生命周期的理解？"></a>21.请详细说下你对vue生命周期的理解？</h1><p>Vue的生命周期就是vue实例从创建到销毁的全过程，也就是new Vue() 开始就是vue生命周期的开始。Vue 实例有⼀个完整的⽣命周期，也就是从开始创建、初始化数据、编译模版、挂载Dom -&gt; 渲染、更新 -&gt; 渲染、卸载 等⼀系列过程，称这是Vue的⽣命周期。</p>
-<p>有八个阶段创建前/后，载入前/后，更新前/后，销毁前/后</p>
-<p>创建前/后： 在beforeCreate阶段，vue实例的挂载元素el和数据对象data都为undefined，还未初始化。在created阶段，vue实例的数据对象data有了，el还没有</p>
-<p>载入前/后：在beforeMount阶段，vue实例的$el和data都初始化了，但还是挂载之前为虚拟的dom节点，data.message还未替换。在mounted阶段，vue实例挂载完成，data.message成功渲染。</p>
-<p>更新前/后：当data变化时，会触发beforeUpdate和updated方法</p>
-<p>销毁前/后：在执行destroy方法后，对data的改变不会再触发周期函数，说明此时vue实例已经解除了事件监听以及和dom的绑定，但是dom结构依然存在</p>
-<h1 id="22-vue优点？"><a href="#22-vue优点？" class="headerlink" title="22.vue优点？"></a>22.vue优点？</h1><p><strong><em>\</em>轻量级框架**</strong>：只关注视图层，是一个构建数据的视图集合，大小只有几十 kb ；</p>
-<p><strong><em>\</em>简单易学**</strong>：国人开发，中文文档，不存在语言障碍 ，易于理解和学习；</p>
-<p><strong><em>\</em>双向数据绑定**</strong>：保留了 angular 的特点，在数据操作方面更为简单；</p>
-<p><strong><em>\</em>组件化**</strong>：保留了 react 的优点，实现了 html 的封装和重用，在构建单页面应用方面有着独特的优势；</p>
-<p><strong><em>\</em>视图，数据，结构分离**</strong>：使数据的更改更为简单，不需要进行逻辑代码的修改，只需要操作数据就能完成相关操作；</p>
-<p><strong><em>\</em>虚拟DOM**</strong>：dom 操作是非常耗费性能的，不再使用原生的 dom 操作节点，极大解放 dom 操作，但具体操作的还是 dom 不过是换了另一种方式；</p>
-<p><strong><em>\</em>运行速度更快**</strong>：相比较于 react 而言，同样是操作虚拟 dom，就性能而言， vue 存在很大的优势</p>
-<h1 id="23-单页面应用和多页面应用区别及优缺点？"><a href="#23-单页面应用和多页面应用区别及优缺点？" class="headerlink" title="23.单页面应用和多页面应用区别及优缺点？"></a>23.单页面应用和多页面应用区别及优缺点？</h1><p><strong><em>\</em>单页面**</strong>（Sing Page Application——SPA）：顾名思义，只有一个页面。一般是一个主页和多个路由页面组成。</p>
-<p><strong><em>\</em>优点**</strong>：</p>
-<p>  公共资源不重新加载，局部加载，服务器压力小</p>
-<p>  切换速度快，用户体验好</p>
-<p>  前后端分离</p>
-<p> <strong><em>\</em>缺点**</strong>：</p>
-<p>  不利于SEO（可以优化：比如路由懒加载等）</p>
-<p>  初次加载时耗时多</p>
-<p>  开发难度较大（相对多页面）</p>
-<p><strong><em>\</em>多页面**</strong>（Multi Page Application——MPA）：有多个HTML页面，跳转的时候是从一个html页面跳到另一个页面。</p>
-<p><strong><em>\</em>优点**</strong>：</p>
-<p>  利于SEO。</p>
-<p>  更容易扩展。</p>
-<p>  更易数据分析。</p>
-<p><strong><em>\</em>缺点**</strong>：</p>
-<p>  开发成本高。</p>
-<p>  服务器压力大。</p>
-<p>  用户体验相对较差。</p>
-<h1 id="24-vue路由跳转传参的方式有哪些？"><a href="#24-vue路由跳转传参的方式有哪些？" class="headerlink" title="24.vue路由跳转传参的方式有哪些？"></a>24.vue路由跳转传参的方式有哪些？</h1><p><strong><em>\</em>params传参(显示参数)**</strong></p>
-<p>在url中会显示出传参的值，刷新页面不会失去拿到的参数，使用该方式传值的时候，需要子路由提前配置好参数</p>
-<p><strong><em>\</em>params传参(不显示参数)**</strong></p>
-<p>在url中不会显示出传参的值，但刷新页面会失去拿到的参数，使用该方式 传值 的时候，需要子路由提前配置好name参数</p>
-<p><strong><em>\</em>query 传参**</strong></p>
-<p>query 传过去的参数会拼接在地址栏中（?name=xx），刷新页面数据不会丢失，使用path和name都可以</p>
-<p><strong><em>\</em>VUE几种路由跳转几种方式的区别**</strong></p>
-<p>this.$router.push：跳转到指定url路径，并想history栈中添加一个记录，点击后退会返回到上一个页面</p>
-<p>this.$router.replace：跳转到指定url路径，但是history栈中不会有记录，点击返回会跳转到上上个页面 (就是直接替换了当前页面)</p>
-<p>this.$router.go(n)：向前或者向后跳转n个页面，n可为正整数或负整数</p>
-<h1 id="25-vue遇到的坑，如何解决的？"><a href="#25-vue遇到的坑，如何解决的？" class="headerlink" title="25.vue遇到的坑，如何解决的？"></a>25.vue遇到的坑，如何解决的？</h1><p>用webpack打包后访问index.html出现资源加载404问题，解决：开发环境的static文件夹是基于根目录的，所以直接用‘/’ 。</p>
-<p>vue中，假如，你引入某个样式，然后这个样式里面有引用到图片，如果你的文件中没有这个图片，这时候，即使你没有引用这个图片对应的类名，但是只要你有引入这个css文件，他找不到相应路径图片也会报错！！！</p>
-<p>用for循环出来的列表，在设置列表中的元素的动态属性时，需要加bind属性“：”，不然动态属性设置不出来</p>
-<p>在vue中的html中的img中的src不可以直接设置为变量，在data里面直接引路径，只能通过import的形式引入,值得注意的是，引用这个方式的时候src是变量需要加“：”，不然会报错！！！！！</p>
-<p>在中使用v-for=”(item ,index) in list”进行循环时，需要注意加：:key=“index”,不然会出现警告！</p>
-<p>父组件ajax异步更新数据，子组件props获取不到</p>
-<p>应用场景</p>
-<p>当父组件  axjos  获取数据，子组件使用  props  接收数据时，执行  mounted  的时候  axjos  还没有返回数据，而且  mounted 只执行一次，这时  props  中接收的数据为空</p>
-<p>解决方案：在对应组件中判断数据的长度</p>
-<h1 id="26-vue封装通用组件方法思路？"><a href="#26-vue封装通用组件方法思路？" class="headerlink" title="26.vue封装通用组件方法思路？"></a>26.vue封装通用组件方法思路？</h1><p>封装组件需要注意三点：1. props参数2. slot定制插槽3. event自定义事件</p>
-<p>首先，使用Vue.extend()创建一个组件</p>
-<p>然后，使用Vue.component()方法注册组件</p>
-<p>接着，如果子组件需要数据，可以在props中接受定义</p>
-<p>最后，子组件修改好数据之后，想把数据传递给父组件，可以使用emit()方法</p>
-<p>父子组件<strong><em>\</em>间的数据传递**</strong></p>
-<p>  <strong><em>\</em>父组件通过 prop 将数据传递给子组件**</strong></p>
-<p>  <strong><em>\</em>子组件通**</strong>过 emit 事件将子组件数据传递给父组件</p>
-<p>  子组件不能直接修改 prop 中传给父组件的值</p>
-<h1 id="27-Vue-js中ajax请求代码应该写在组件的methods中还是vuex的actions中？"><a href="#27-Vue-js中ajax请求代码应该写在组件的methods中还是vuex的actions中？" class="headerlink" title="27.Vue.js中ajax请求代码应该写在组件的methods中还是vuex的actions中？"></a>27.Vue.js中ajax请求代码应该写在组件的methods中还是vuex的actions中？</h1><p>如果请求来的数据是不是要被其他组件公用，仅仅在请求的组件内使用，就不需要放入vuex 的state里。</p>
-<p>如果被其他地方复用，这个很大几率上是需要的，如果需要，请将请求放入action里，方便复用，并包装成promise返回，在调用处用async await处理返回的数据。如果不要复用这个请求，那么直接写在vue文件里很方便。</p>
-<h1 id="28-Vuex中如何异步修改状态？"><a href="#28-Vuex中如何异步修改状态？" class="headerlink" title="28.Vuex中如何异步修改状态？"></a>28.Vuex中如何异步修改状态？</h1><p>actions类似于mutations，不同在于：Action提交的是mutation，而不是直接变更状态；</p>
-<p>Action可以包含任意异步操作，Action函数接受一个与store实例具有相同方法和属性的 context对象，因此你可以调用context.commit提交一个mutation，或者通过context.state 和context.getters来获取state和getters。</p>
-<p>Action 通过store.dispatch方法触发：store.dispatch(‘increment’)</p>
-<h1 id="29-刷新浏览器后，Vuex的数据是否存在？如何解决？"><a href="#29-刷新浏览器后，Vuex的数据是否存在？如何解决？" class="headerlink" title="29.刷新浏览器后，Vuex的数据是否存在？如何解决？"></a>29.刷新浏览器后，Vuex的数据是否存在？如何解决？</h1><p>原因：因为 store 里的数据是保存在运行内存中的，当页面刷新时，页面会重新加载vue实例，store里面的数据就会被重新赋值初始化。</p>
-<p>localStorage 或者就是sessionStorage</p>
-<p>下载持久化存储插件。比如使用：vuex-along 的实质也是将 vuex 中的数据存放到 localStorage 或者 sessionStroage 中，只不过这个存取过程组件会帮我们完成，我们只需要用vuex的读取数据方式操作就可以了</p>
-<h1 id="30-vuex中的辅助函数怎么使用？"><a href="#30-vuex中的辅助函数怎么使用？" class="headerlink" title="30.vuex中的辅助函数怎么使用？"></a>30.vuex中的辅助函数怎么使用？</h1><p>vuex的辅助函数有4个</p>
-<p><strong><em>\</em>mapState**</strong> 函数返回的是一个对象。通常，我们需要使用一个工具函数将多个对象合并为一个，以使我们可以将最终对象传给 computed 属性。</p>
-<p><strong><em>\</em>mapGetters**</strong> 辅助函数仅仅是将 store 中的 getter 映射到局部计算属性，因此你可以这样来使用他</p>
-<p><strong><em>\</em>mapMutations**</strong> 辅助函数将组件中的 methods 映射为 store.commit，其原理就是将this.montify 映射为this.$store.commit(‘montify’)</p>
-<p><strong><em>\</em>mapActions**</strong>在组件中使用 this.$store.dispatch(‘prodect’) 分发 action，或者使用 mapActions 辅助函数将组件的 methods 映射为 store.dispatch 调用</p>
-<h1 id="31-vue插槽的理解？"><a href="#31-vue插槽的理解？" class="headerlink" title="31.vue插槽的理解？"></a>31.vue插槽的理解？</h1><p>Vue插槽是Vue中常见的一种组件间的相互通信方式，作用是让父组件可以向子组件指定位置插入html结构，适用于父组件===&gt;子组件，在要接收数据的组件页面通过<slot>标签来表示，简单来说，就是通过此标签来起到占位的作用，而要插入的内容也会对应到标签所在的位置。</p>
-<p><strong><em>\</em>默认插槽是插槽最基本的方式**</strong>：<br>首先在父组件App.Vue中引入子组件，并在引入的子组件标签内插入需要的html元素，在子组件中把需要用插槽的地方用<slot>标签替代</p>
-<p><strong><em>\</em>具名插槽就是有名字的插槽**</strong>。</p>
-<p>使用：首先在要插入html的部分需要用一个<template>标签包裹住各个部分其次，当给<template>标签绑定slot=“name” 属性时，需要在子组件中对应每个<template> 给出一个<slot> 并且添加上name属性</p>
-<p><strong><em>\</em>作用域插槽**</strong></p>
-<p>数据在组件的自身，但根据数据生成的结构需要组件的使用者来决定，也就是说，作用域插槽的不同之处就在于，数据不在父组件身上，而是在子组件身上，且组件的结构和内容由父组件决定。作用域组件限定了组件内结构和数据的展示范围，以便在开发中我们可以根据一个组件而不断变换其中的内容和结构。</p>
-<h1 id="32-vue3中如何获取refs，dom对象的方式？"><a href="#32-vue3中如何获取refs，dom对象的方式？" class="headerlink" title="32.vue3中如何获取refs，dom对象的方式？"></a>32.vue3中如何获取refs，dom对象的方式？</h1><p>Vue3中无法使用this.$refs的方式获取ref的DOM实例</p>
-<p>Vue3提供了getCurrentInstance函数，此函数能返回当前组件的实例对象，也就是当前vue这个实例对象。</p>
-<p>通过打印getCurrentInstance获取的对象就可以看见此对象包含页面中的refs。</p>
-<h1 id="33-vue3中生命周期的和vue2中的区别？"><a href="#33-vue3中生命周期的和vue2中的区别？" class="headerlink" title="33.vue3中生命周期的和vue2中的区别？"></a>33.vue3中生命周期的和vue2中的区别？</h1><p>vue2常用生命周期：</p>
-<p>创建前：beforeCreate() 只有一些实例本身的事件和生命周期函数</p>
-<p>创建后：Created() 是最早使用data和methods中数据的钩子函数</p>
-<p>挂载前：beforeMount() 指令已经解析完毕，内存中已经生成dom树</p>
-<p>挂载后：Mounted() dom渲染完毕页面和内存的数据已经同步</p>
-<p>更新前：beforeUptate() 当data的数据发生改变会执行这个钩子，内存中的数据是新的，页面是旧的</p>
-<p>更新后：Updated() 内存和页面都是新的</p>
-<p>销毁前：beforeDestroy() 即将销毁data和methods中的数据此时还是可以使用的，可以做一些释放内存的操作</p>
-<p>销毁后：Destroyed() 已经销毁完毕</p>
-<p>vue3生命周期做出了一些改动</p>
-<p>前面的是vue2的后面是vue3</p>
-<p>beforeCreate  -&gt; setup() 开始创建组件之前，创建的是data和method</p>
-<p>created    -&gt; setup()</p>
-<p>beforeMount  -&gt; onBeforeMount 组件挂载到节点上之前执行的函数。</p>
-<p>mounted    -&gt; onMounted 组件挂载完成后执行的函数</p>
-<p>beforeUpdate  -&gt; onBeforeUpdate 组件更新之前执行的函数。</p>
-<p>updated    -&gt; onUpdated 组件更新完成之后执行的函数。</p>
-<p>beforeDestroy -&gt; onBeforeUnmount 组件挂载到节点上之前执行的函数。</p>
-<h1 id="34-说说vue中的diff算法？"><a href="#34-说说vue中的diff算法？" class="headerlink" title="34.说说vue中的diff算法？"></a>34.说说vue中的diff算法？</h1><p>diff算法 当data发生改变 会根据新的数据生成一个新的虚拟dom ，新的虚拟dom和旧的虚拟dom进行对比，这个对比的过程就是diff算法。</p>
-<p>Vue2 是全量 Diff（当数据发生变化，它就会新生成一个DOM树，并和之前的DOM树进行比较，找到不同的节点然后更新。）；Vue3 是静态标记 + 非全量 Diff（Vue 3在创建虚拟DOM树的时候，会根据DOM中的内容会不会发生变化，添加一个静态标记。之后在与上次虚拟节点进行对比的时候，就只会对比这些带有静态标记的节点。）</p>
-<p>使用最长递增子序列优化对比流程，可以最大程度的减少 DOM 的移动，达到最少的 DOM 操作</p>
-<h1 id="35-说说-Vue-中-CSS-scoped-的原理？"><a href="#35-说说-Vue-中-CSS-scoped-的原理？" class="headerlink" title="35.说说 Vue 中 CSS scoped 的原理？"></a>35.说说 Vue 中 CSS scoped 的原理？</h1><p>scoped 属性是 style 标签上的一个特殊属性（布尔值）。表示当前style 里的样式只属于当前模块。（作用域、私有化的思想）保证css的作用域不会变成全局 而被其它模块的css污染。</p>
-<p>在vue中引入了scoped这个概念，scoped的设计思想就是让当前组件的样式不会修改到其它地方的样式，使用了data-v-hash的方式来使css有了它对应模块的标识，这样写css的时候不需要加太多额外的选择器，方便很多。</p>
-<h1 id="36-vue3中怎么设置全局变量？"><a href="#36-vue3中怎么设置全局变量？" class="headerlink" title="36.vue3中怎么设置全局变量？"></a>36.vue3中怎么设置全局变量？</h1><p>首先在main.js里写一个我们要定义的全局变量</p>
-<p>app.config.globalProperties.$key = “内容”;// 定义全局变量</p>
-<p>现在在页面里需要使用这个变量，只需要从vue中引入getCurrentInstance即可</p>
-<p>import {getCurrentInstance} from ‘vue’;</p>
-<p> setup(){</p>
-<p>  const { proxy } = getCurrentInstance();</p>
-<p>  console.log(proxy.$key);</p>
-<p> }</p>
-<h1 id="37-Vue中给对象添加新属性时，界面不刷新怎么办"><a href="#37-Vue中给对象添加新属性时，界面不刷新怎么办" class="headerlink" title="37.Vue中给对象添加新属性时，界面不刷新怎么办?"></a>37.Vue中给对象添加新属性时，界面不刷新怎么办?</h1><p>vue2的响应式原理使用的是对象代理去实现的,对象代理中有一个get和set方法,当我们访问对象的时候就会触发get方法,当我们对对象中的值进行修改时会触发set方法。但是当我们给对象添加一个新的属性时对象代理是检测不到的,所以就会出现直接给对象添加属性响应式不生效的问题。</p>
-<p>所以在vue中可以使用this.$set(对象名,‘属性名’,属性值)的方法去给对象添加属性,或者使用Vue.set(对象名,‘属性名’,属性值)的方法进行添加,添加之后的属性就带有响应式了</p>
-<h1 id="38-谈谈对Vue中双向绑定的理解？"><a href="#38-谈谈对Vue中双向绑定的理解？" class="headerlink" title="38.谈谈对Vue中双向绑定的理解？"></a>38.谈谈对Vue中双向绑定的理解？</h1><p>Vue.js 是采用数据劫持结合发布者-订阅者模式的方式，通过Object.defineProperty()来劫持各个属性的setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。主要分为以下几个步骤：</p>
-<p>需要observe的数据对象进行递归遍历，包括子属性对象的属性，都加上setter和getter这样的话，给这个对象的某个值赋值，就会触发setter，那么就能监听到了数据变化</p>
-<p>compile解析模板指令，将模板中的变量替换成数据，然后初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者，一旦数据有变动，收到通知，更新视图</p>
-<p>Watcher订阅者是Observer和Compile之间通信的桥梁，主要做的事情是: ①在自身实例化时往属性订阅器(dep)里面添加自己 ②自身必须有一个update()方法 ③待属性变动dep.notice()通知时，能调用自身的update()方法，并触发Compile中绑定的回调，则功成身退。</p>
-<p>MVVM作为数据绑定的入口，整合Observer、Compile和Watcher三者，通过Observer来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，达到数据变化 -&gt; 视图更新；视图交互变化(input) -&gt; 数据model变更的双向绑定效果。</p>
-<h1 id="39-为什么vue2和vue3语法不可以混用？"><a href="#39-为什么vue2和vue3语法不可以混用？" class="headerlink" title="39.为什么vue2和vue3语法不可以混用？"></a>39.为什么vue2和vue3语法不可以混用？</h1><p>Vue 2和Vue 3在设计上有一些重大区别，因此它们的语法和用法也有很大的不同。主要的区别有以下几点：</p>
-<p>1.模板编译方式：Vue 2使用基于字符串的模板编译，而Vue 3则采用了基于函数的模板编译方式。</p>
-<p>2.响应式系统：Vue 3中通过Proxy实现了更加高效的响应式系统，与Vue 2中的Object.defineProperty有很大不同。</p>
-<p>3.组件注册方式：Vue 3中使用了新的API来注册组件，如<code>createApp</code>和<code>defineComponent</code>，而Vue 2中则是通过<code>Vue.component</code>等全局API来注册组件。</p>
-<p>由于这些重大区别，Vue 2和Vue 3的语法和用法也有很大的不同。例如，在Vue 3中，使用v-bind指令绑定属性时需要加上冒号（:），而在Vue 2中则不需要。同时，Vue 3中的生命周期钩子函数也发生了变化。如果混用Vue 2和Vue 3的语法，会导致代码无法正常工作或者出现意外的错误，因此不建议混用两个版本的语法。</p>
-<h1 id="40-vue3中setup函数如何进行组件通讯？"><a href="#40-vue3中setup函数如何进行组件通讯？" class="headerlink" title="40.vue3中setup函数如何进行组件通讯？"></a>40.vue3中setup函数如何进行组件通讯？</h1><p><strong><em>\</em>Props方式**</strong>是Vue中最常见的一种父传子的一种方式，我们将数据以及对数据的操作定义在父组件，子组件仅做列表的一个渲染，子组件只需要对父组件传递的值进行渲染即可</p>
-<p><strong><em>\</em>emit方式**</strong>也是Vue中最常见的组件通信方式，该方式用于子传父，在子组件中点击【添加】按钮后，emit一个自定义事件，并将添加的值作为参数传递。在父组件中只需要监听子组件自定义的事件，然后执行对应的添加操作</p>
-<p><strong><em>\</em>provide和inject**</strong>是Vue中提供的一对API，该API可以实现父组件向子组件传递数据，无论层级有多深，都可以通过这对API实现。</p>
-<p><strong><em>\</em>Vuex 和 Pinia**</strong> 是 Vue 3 中的状态管理工具，使用这两个工具可以轻松实现组件通信。</p>
-<p><strong><em>\</em>Refs**</strong>有时候想访问 r e f s 绑 定 的 组 件 的 属 性 或 者 方 法 ， 我 们 会 使 用 refs绑定的组件的属性或者方法，我们会使用 refs绑定的组件的属性或者方法，我们会使用refs。但是Vue3不同于Vue2，在 Vue3的setup中我们是无法访问到this的，所以我们需要借助一个方法，那就是getCurrentInstance，该方法返回了当前的实例对象。</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://admin741-cl.github.io">admin741</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://admin741-cl.github.io/posts/ae65.html">https://admin741-cl.github.io/posts/ae65.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://admin741-cl.github.io" target="_blank">孔乙己的长衫</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://img1.baidu.com/it/u=1009672910,2505626862&amp;fm=253&amp;fmt=auto&amp;app=138&amp;f=JPEG?w=500&amp;h=500" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">不给糖果就捣蛋</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></button></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/99be.html" title="常见面试题（开胃菜）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/blog-construct/banner.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">常见面试题（开胃菜）</div></div></a></div><div class="next-post pull-right"><a href="/posts/f0ec.html" title="vue3笔记（更新中）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/ex/wallhaven-exe1xo.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">vue3笔记（更新中）</div></div></a></div></nav></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By admin741</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
+<p><div id="air-conditioner-vue"></div></p>
+<script defer data-pjax src='https://npm.elemecdn.com/anzhiyu-air-conditioner@1.0.1/index.3f125bc6.js'></script>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://admin741-cl.github.io">admin741</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://admin741-cl.github.io/posts/ae65.html">https://admin741-cl.github.io/posts/ae65.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://admin741-cl.github.io" target="_blank">孔乙己的长衫</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://w.wallhaven.cc/full/m3/wallhaven-m3wr7m.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><button class="tip-button reward-button"><span class="tip-button__text">不给糖果就捣蛋</span><div class="coin-wrapper"><div class="coin"><div class="coin__middle"></div><div class="coin__back"></div><div class="coin__front"></div></div></div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></button></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/c79e.html" title="微信小程序传参"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">微信小程序传参</div></div></a></div><div class="next-post pull-right"><a href="/posts/923a.html" title="json-server文档"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/ex/wallhaven-ex9gwo.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">json-server文档</div></div></a></div></nav></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By admin741</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><script>const preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
@@ -575,37 +317,6 @@ var cssText = `top: 0; background: ${showBg};`
 document.getElementById('app-refresh').style.cssText = cssText
 }
 }</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><!-- hexo injector body_end start --><script data-pjax>
-  function butterfly_clock_anzhiyu_injector_config(){
-    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
-    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
-    console.log('已挂载butterfly_clock_anzhiyu')
-    if(parent_div_git) {
-      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
-    }
-  }
-  var elist = 'null'.split(',');
-  var cpage = location.pathname;
-  var epage = 'all';
-  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
-  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
-  var baidu_ak_key = 'undefined';
-  var flag = 0;
-  var clock_rectangle = '112.982279,28.19409';
-  var clock_default_rectangle_enable = 'false';
-
-  for (var i=0;i<elist.length;i++){
-    if (cpage.includes(elist[i])){
-      flag++;
-    }
-  }
-
-  if ((epage ==='all')&&(flag == 0)){
-    butterfly_clock_anzhiyu_injector_config();
-  }
-  else if (epage === cpage){
-    butterfly_clock_anzhiyu_injector_config();
-  }
-  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script data-pjax>
     function butterfly_categories_card_injector_config(){
       var parent_div_git = document.getElementById('99be');
       var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"></ul></div></div>';
@@ -616,9 +327,33 @@ document.getElementById('app-refresh').style.cssText = cssText
     butterfly_categories_card_injector_config()
     }
   </script><script data-pjax>
+  function butterfly_footer_beautify_injector_config(){
+    var parent_div_git = document.getElementById('footer-wrap');
+    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.2.2" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" data-title="本站使用JsDelivr为静态资源提供CDN加速" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" style="margin-inline:5px" data-title="本站已在湘进行备案" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/豫ICP备-2022000423号-e1d492?style=flat&amp;logo=data:image/png;base64,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" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
+    console.log('已挂载butterfly_footer_beautify')
+    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+    }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_footer_beautify_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_footer_beautify_injector_config();
+  }
+  </script><script async src="/js/a.js"></script><script data-pjax>
   function butterfly_swiper_injector_config(){
     var parent_div_git = document.getElementById('recent-posts');
-    var item_html = '<div class="recent-post-item swiper_container_card" style="height: auto;width: 100%"><div id="random"><div id="random-banner"><canvas id="peoplecanvas"></canvas></div><a id="random-hover" style="width:100%;height:auto;" href="javascript:toRandomPost()" rel="external nofollow noreferrer" one-link-mark="yes"><i class="fa fa-paper-plane" style="margin-left:10px"></i><div style="margin-left:10px">随便逛逛<i class="fa-solid fa-arrow-right" style="margin-left:10px"></i></div></a></div><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/923a.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/ex/wallhaven-ex9gwo.png" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-09-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/923a.html&quot;);" href="javascript:void(0);" alt="">json-server文档</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/923a.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-11-03</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt="">vue2/3区别理解</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/f0ec.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/ex/wallhaven-exe1xo.jpg" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-10-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/f0ec.html&quot;);" href="javascript:void(0);" alt="">vue3笔记（更新中）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/f0ec.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/d238.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/p9/wallhaven-p9jdw3.jpg" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/d238.html&quot;);" href="javascript:void(0);" alt="">源码笔记（更新中）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/d238.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/cdc4.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/85/wallhaven-85dgxj.png" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/cdc4.html&quot;);" href="javascript:void(0);" alt="">canvas学习</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/cdc4.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/99be.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/blog-construct/banner.jpg" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-05-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/99be.html&quot;);" href="javascript:void(0);" alt="">常见面试题（开胃菜）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/99be.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/m3/wallhaven-m3wr7m.png" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-20</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt="">为你的夏日带去清凉!</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    var item_html = '<div class="recent-post-item swiper_container_card" style="height: auto;width: 100%"><div id="random"><div id="random-banner"><canvas id="peoplecanvas"></canvas></div><a id="random-hover" style="width:100%;height:auto;" href="javascript:toRandomPost()" rel="external nofollow noreferrer" one-link-mark="yes"><i class="fa fa-paper-plane" style="margin-left:10px"></i><div style="margin-left:10px">随便逛逛<i class="fa-solid fa-arrow-right" style="margin-left:10px"></i></div></a></div><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/923a.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/ex/wallhaven-ex9gwo.png" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-09-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/923a.html&quot;);" href="javascript:void(0);" alt="">json-server文档</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/923a.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/5a61.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-11-03</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/5a61.html&quot;);" href="javascript:void(0);" alt="">vue2/3区别理解</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/5a61.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/f0ec.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/ex/wallhaven-exe1xo.jpg" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-10-19</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/f0ec.html&quot;);" href="javascript:void(0);" alt="">vue3笔记（更新中）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/f0ec.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/d238.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/p9/wallhaven-p9jdw3.jpg" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/d238.html&quot;);" href="javascript:void(0);" alt="">源码笔记（更新中）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/d238.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/cdc4.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/85/wallhaven-85dgxj.png" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2023-01-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/cdc4.html&quot;);" href="javascript:void(0);" alt="">canvas学习</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/cdc4.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/99be.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/blog-construct/banner.jpg" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-05-08</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/99be.html&quot;);" href="javascript:void(0);" alt="">常见面试题（开胃菜）</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/99be.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt=""><img width="48" height="48" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://w.wallhaven.cc/full/m3/wallhaven-m3wr7m.png" alt="" onerror="this.src=https://cdn.cbd.int/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2022-10-20</span><a class="blog-slider__title" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt="">为你的夏日带去清凉!</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" onclick="pjax.loadUrl(&quot;posts/ae65.html&quot;);" href="javascript:void(0);" alt="">详情       </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
     console.log('已挂载butterfly_swiper')
     parent_div_git.insertAdjacentHTML("afterbegin",item_html)
     }
@@ -639,7 +374,7 @@ document.getElementById('app-refresh').style.cssText = cssText
   else if (epage === cpage){
     butterfly_swiper_injector_config();
   }
-  </script><script defer src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/js/swiper.min.js"></script><script defer data-pjax src="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/swiper_init.js"></script><script data-pjax src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/gsap/3.9.1/gsap.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/people.min.js"></script><script async src="/anzhiyu/random.js"></script><script async src="/js/ali_font.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+  </script><script defer src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/js/swiper.min.js"></script><script defer data-pjax src="https://cdn.cbd.int/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/swiper_init.js"></script><script data-pjax src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/gsap/3.9.1/gsap.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper-anzhiyu@1.0.4/lib/people.min.js"></script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
 for(var i = 0;i<arr.length;i++){
     arr[i].classList.add('wow');
     arr[i].classList.add('animate__zoomIn');
@@ -696,16 +431,23 @@ for(var i = 0;i<arr.length;i++){
     arr[i].setAttribute('data-wow-offset', '');
     arr[i].setAttribute('data-wow-iteration', '');
   }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax>
-  function butterfly_footer_beautify_injector_config(){
-    var parent_div_git = document.getElementById('footer-wrap');
-    var item_html = '<div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&amp;logo=hexo" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" data-title="主题版本Butterfly_v4.2.2" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&amp;logo=bitdefender" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" data-title="本站使用JsDelivr为静态资源提供CDN加速" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&amp;logo=jsDelivr" alt=""/></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/#/Integrated/index" style="margin-inline:5px" data-title="本站已在湘进行备案" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/豫ICP备-2022000423号-e1d492?style=flat&amp;logo=data:image/png;base64,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" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&amp;logo=GitHub" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title=""><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&amp;logo=Claris" alt=""/></a></p>';
-    console.log('已挂载butterfly_footer_beautify')
-    parent_div_git.insertAdjacentHTML("beforeend",item_html)
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
     }
+  }
   var elist = 'null'.split(',');
   var cpage = location.pathname;
   var epage = 'all';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
   var flag = 0;
+  var clock_rectangle = '112.982279,28.19409';
+  var clock_default_rectangle_enable = 'false';
 
   for (var i=0;i<elist.length;i++){
     if (cpage.includes(elist[i])){
@@ -714,9 +456,9 @@ for(var i = 0;i<arr.length;i++){
   }
 
   if ((epage ==='all')&&(flag == 0)){
-    butterfly_footer_beautify_injector_config();
+    butterfly_clock_anzhiyu_injector_config();
   }
   else if (epage === cpage){
-    butterfly_footer_beautify_injector_config();
+    butterfly_clock_anzhiyu_injector_config();
   }
-  </script><script async src="/js/a.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><script async src="/js/ali_font.js"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
